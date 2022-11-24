@@ -1,11 +1,5 @@
 const contactOperations = require("./contacts.js");
 const argv = require("yargs").argv;
-// const yargs = require("yargs");
-// const { hideBin } = require("yargs/helpers");
-
-// const arr = hideBin(process.argv);
-// const { argv } = yargs(arr);
-// console.log(argv);
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
     switch (action) {
@@ -43,11 +37,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         }
 }
 
-// invokeAction({ action: "list" });
-// invokeAction({ action: "get", id: "5" });
-
 (async () => {
     await invokeAction(argv);
 })();
 
-// invokeAction(argv);
